@@ -1,23 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import App from './App';
+import { store } from './app/store';
+import { Provider } from 'react-redux';
+import * as serviceWorker from './serviceWorker';
 
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-
-function Hero(props){
-  console.log(props);
-/*   const title = props.title; */
-const {title,content} = props;
-  return(
-    <div className="container">
-      <div className="hero">
-        <h1>{title}</h1>
-        {content}
-      </div>
-      <div className="main"></div>
-      <div className="footer"></div>
-    </div>
-  );
-}
-ReactDOM.render(<Hero title="Paisaflix" content="Paisaflix"/>, document.getElementById('root'));
-
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
