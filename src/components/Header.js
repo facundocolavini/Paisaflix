@@ -1,16 +1,41 @@
 import {AppBar, makeStyles, Toolbar, IconButton } from '@material-ui/core';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { useHistory } from 'react-router';
-import logo from '../assets/images/logo.png';
-import searchIcon from '../assets/icons/search.svg';
-import userIcon from '../assets/images/user.png';
-import HeroMovie from '../components/HeroMovie';
+import {baseurl} from '../utils/baseUrl';
+import { useState, useEffect } from 'react';
 
 const Header = () => {
     const classes=  useStyles();
     const history = useHistory();
+    const HERO_ENDPOINT = baseurl('/hero');
+    const TRAILERS_ENDPOINT = baseurl('/trailers');
+    const [movieHero , setMovieHero] = useState();
+
+    useEffect(()=>{
+        getHeroMovie();
+    },[]);
+
+    const getHeroMovie= async () => {
+        const data = await fetch(HERO_ENDPOINT,{
+            "method": 'GET',
+            "headers": {
+                "Accept": 'application/json',
+                "Content-Type": 'application/json',
+            }
+
+        });
+        const responseJSON = await data.json();
+        setMovieHero(responseJSON);
+  
+    }; 
+
+    
+
+
+
     return (
+   
         <div className="header">
             <AppBar elevation={0} position="sticky" className={classes.root}>
                 <Toolbar className="toolbar">
@@ -34,9 +59,9 @@ const Header = () => {
                     </div>    
                 </Toolbar>
             </AppBar>
-            <HeroMovie/>
+            <HeroMovie  />
         </div>
-    
+     
     )
 }
 const useStyles = makeStyles((theme) => ({

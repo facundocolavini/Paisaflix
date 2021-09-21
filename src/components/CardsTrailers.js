@@ -1,20 +1,10 @@
 import React from 'react'
-import trailer1 from '../assets/images/img-trailers-1.png'
-function CardsTrailers() {
-
+import img1 from '../assets/images/img-trailers-1.png'
+function CardsTrailers(props) {
+    const data = props.movieTrailers.data;
+    console.log(data,'trailers')
     return (
-        <div className="trailers">
-           <h2 className="title-trailer">Trailers</h2>
-           <div className="trailers-container">
-                <div className="trailer">
-                    <img src={trailer1} className="image-trailer" alt="trailer"></img>
-                    <img src={trailer1} className="image-trailer" alt="trailer"></img>
-                    <img src={trailer1} className="image-trailer" alt="trailer"></img>
-                    <img src={trailer1} className="image-trailer" alt="trailer"></img>
-
-                </div>
-           </div>
-        </div>
+        <div></div>
     )
 }
 

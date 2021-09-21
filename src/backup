@@ -1,0 +1,10 @@
+        {/*       <Router>
+          <Switch>
+            <Route path='/'>
+              <Home/>
+            </Route>
+            <Route  path='/landing'>
+              <LandingMovie/>
+            </Route>  
+          </Switch>
+        </Router> */}
