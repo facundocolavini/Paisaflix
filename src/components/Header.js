@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header className="header wrapper">
             <div className="nav-left">
-                <a href="index.html" className="nav-logo" alt="logo">Paisaflex </a> 
+                <a href="/" className="nav-logo" alt="logo">Paisaflex </a> 
                 <ul className="nav-list">
                     <li className="list-item"><a className="link-list" href="index.html">Home</a> </li>
                     <li className="list-item"><a className="link-list" href="index.html">Contact Us</a></li>

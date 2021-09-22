@@ -1,4 +1,5 @@
 import React from 'react'
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 /* import logo from './assets/images/logo.png';
 
 import hStar from './assets/icons/half-star.svg';
@@ -10,6 +11,7 @@ import { IconButton } from '@material-ui/core'; */
 import {baseurl} from './utils/baseUrl';
 import star from './assets/icons/star.svg'; */
 import Home from './Pages/Home';
+import LandingMovie from './Pages/LandingMovie';
 
 
 const App = () => {
@@ -40,8 +42,13 @@ const [movie,setMovies]= useState({});
   return (
     <div className="container">
      
-      <Home/>
-
+     
+      <BrowserRouter>
+          <Switch>
+            <Route exact path='/landing' component={LandingMovie}></Route>  
+            <Route exact path='/' component={Home}></Route>
+          </Switch>
+      </BrowserRouter> 
    {/*    <main className="main">
         <div className="title-featured">
           <h2 className="title-1">Featured</h2>

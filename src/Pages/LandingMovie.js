@@ -1,12 +1,11 @@
 
 import React from 'react'
+import Hero from '../components/Hero'
 
-const LandingMovie = () => {
+const LandingMovie = ({data}) => {
 
     return (
-        <div>
-            LandingMovie
-        </div>
+        <Hero/>
     )
 }
 
