@@ -1,4 +1,3 @@
- 
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom';
 import iconDuration from '../assets/icons/clock.svg';
@@ -6,6 +5,7 @@ import iconViews from '../assets/icons/eye.svg';
 import loading from '../assets/icons/loading.svg';
 const ListMovies = ({movies,time,views}) => {
    
+
     return (
         <Fragment>
             <main className="main wrapper">

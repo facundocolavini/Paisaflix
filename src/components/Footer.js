@@ -5,6 +5,8 @@ import mail from '../assets/icons/mail.svg';
 import phone from '../assets/icons/phone.svg';
 
 const Footer = () => {
+
+    
     return (
         <Fragment>
             <footer className="footer wrapper">

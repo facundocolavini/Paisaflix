@@ -168,7 +168,6 @@ body {
   color:var(--color-text);
   font-style: normal;
   font-weight: bold;
-
   font-size: 72px;
   font-family: var(--font-base);
 }
@@ -477,7 +476,6 @@ body {
 }
 .colum-media{
   display: grid; 
- 
   justify-self: flex-end;
   grid-template-columns: 200px;
 }
@@ -521,7 +519,6 @@ body {
   position:relative;
   display:flex;
   align-items: center;
-
 }
 .arrow{
   position: absolute;
@@ -548,10 +545,8 @@ body {
   cursor:pointer;
 }
 .input-contact{
-
   width: 282px;
   height: 64px;
-  
   font-family: var(--font-base);
   font-size: 16px;
   background: transparent;
@@ -561,7 +556,6 @@ body {
   border-radius: 8px;
   padding: 0 16px;
   outline: none;
-
 }
 .arrow:hover{
   background: #aa9027;
@@ -577,5 +571,4 @@ body {
   cursor: pointer;
 }
 
-/* RESPONSIVE */
 

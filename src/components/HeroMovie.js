@@ -3,6 +3,7 @@ import star from '../assets/icons/star.svg';
 import hStar from '../assets/icons/half-star.svg';
 const HeroMovie = ({hero}) => {
 
+    
     return (
         <Fragment>
                 <div className="hero-description wrapper">

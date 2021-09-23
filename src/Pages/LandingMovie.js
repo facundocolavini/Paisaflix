@@ -8,6 +8,8 @@ import Hero from '../components/Hero';
 import { baseurl, CONFIG } from '../utils/baseUrl';
 
 const LandingMovie = () => {
+
+    
     let {_id} = useParams();
     const MOVIE_BY_ID_ENDPOINT = baseurl(`/movies/${_id}`);
     const [movie,setMovie]= useState({});
@@ -42,7 +44,6 @@ const LandingMovie = () => {
             console.log(err);
         }
     },[]);
-
 
 
     

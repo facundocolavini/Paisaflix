@@ -11,6 +11,8 @@ import axios from 'axios';
 
 
 const Home = () => {
+
+    
     const HERO_ENDPOINT = baseurl('/hero');
     const TRAILERS_ENDPOINT = baseurl('/trailers');
     const MOVIES_ENDPOINT = baseurl('/movies');
@@ -95,9 +97,6 @@ const Home = () => {
         }
     },[]);
 
-
- 
- 
 
     return (
         <Fragment>

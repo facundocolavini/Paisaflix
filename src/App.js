@@ -6,6 +6,7 @@ import LandingMovie from './Pages/LandingMovie';
 
 const App = () => {
 
+  
   return (
     <div className="container">
       <BrowserRouter>

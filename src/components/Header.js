@@ -4,6 +4,8 @@ import searchIcon from '../assets/icons/search.svg';
 import userIcon from '../assets/images/user.png';
 
 const Header = () => {
+
+    
     return (
         <header className="header wrapper">
             <div className="nav-left">

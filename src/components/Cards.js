@@ -1,6 +1,7 @@
 import React from 'react'
 const Cards = ({cards}) => {
 
+    
     return (
         <div className="trailers wrapper">      
             <h2 className="title-trailer">Trailers</h2>
@@ -21,8 +22,7 @@ const Cards = ({cards}) => {
                         return(
                             <div key={trailer._id} className="trailers-container ">
                                 <div className="trailer ">
-                                    <img src={trailer.trailerImage} className="image-trailer" alt="trailer"></img>
-                                    
+                                    <img src={trailer.trailerImage} className="image-trailer" alt="trailer"></img> 
                                 </div>
                             </div>
                         )
