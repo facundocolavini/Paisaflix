@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import searchIcon from '../assets/icons/search.svg';
 import userIcon from '../assets/images/user.png';
 
@@ -6,12 +7,12 @@ const Header = () => {
     return (
         <header className="header wrapper">
             <div className="nav-left">
-                <a href="/" className="nav-logo" alt="logo">Paisaflex </a> 
+                <Link to={"/"} className="nav-logo" alt="logo">Paisaflex </Link> 
                 <ul className="nav-list">
-                    <li className="list-item"><a className="link-list" href="index.html">Home</a> </li>
-                    <li className="list-item"><a className="link-list" href="index.html">Contact Us</a></li>
-                    <li className="list-item"><a className="link-list" href="index.html">FAQ</a></li>
-                    <li className="list-item"><a className="link-list" href="index.html">Pricing</a></li>
+                    <li className="list-item"><Link to={"/"} className="link-list" href="index.html">Home</Link> </li>
+                    <li className="list-item"><Link to={"/"} className="link-list" href="index.html">Contact Us</Link></li>
+                    <li className="list-item"><Link to={"/"} className="link-list" href="index.html">FAQ</Link></li>
+                    <li className="list-item"><Link to={"/"} className="link-list" href="index.html">Pricing</Link></li>
                 </ul>
             </div>
             <ul className="nav-right">

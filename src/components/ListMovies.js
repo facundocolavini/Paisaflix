@@ -1,9 +1,12 @@
  
 import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router';
 import duration from '../assets/icons/clock.svg';
 import views from '../assets/icons/eye.svg';
 import loading from '../assets/icons/loading.svg';
-const ListMovies = ({movies,handleMovie}) => {
+const ListMovies = ({movies}) => {
+    
     return (
         <Fragment>
             <main className="main wrapper">
@@ -16,8 +19,8 @@ const ListMovies = ({movies,handleMovie}) => {
                     (movies) ?
                         movies.map((movie,index)=>{
                             return(
-                                <div onClick={(e)=>handleMovie()} key={movie._id} className={"movie-item-"+index}>
-                                    <a  href="/"  className="movie-item">  
+                                <div key={movie._id} className={"movie-item-"+index}>
+                                    <Link to={`/landing/${movie._id}`} className="movie-item">  
                                         <div className="card">
                                             <img src={movie.coverImage} className="movie-img" alt={movie.name}></img>
                                             <div className="information-movie">
@@ -33,7 +36,7 @@ const ListMovies = ({movies,handleMovie}) => {
                                                 {movie.genre}
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             )
                         })

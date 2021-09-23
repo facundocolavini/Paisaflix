@@ -8,6 +8,8 @@ import axios from 'axios';
 
 
 
+
+
 const Home = () => {
     const HERO_ENDPOINT = baseurl('/hero');
     const TRAILERS_ENDPOINT = baseurl('/trailers');
@@ -16,6 +18,8 @@ const Home = () => {
     const [movie,setMovie]= useState({});
     const [movies,setMovies]= useState([]);
     const [trailers,setTrailers]= useState([]);
+
+
 
     const getTrailers= async () => {
         try {
@@ -49,35 +53,61 @@ const Home = () => {
                 console.log(err);
         }
     }; 
+    const toHourAndMins= (values)=>{
+        if(values.length >= 1){
+            return values.map(x=>{
+            let min = x.duration;
+            let hours = Math.floor(min/60);
+            min = min % 60;
+            return `${hours}hr:${min} mins`;
+            })
+        }else{
+            let min = values.duration;
+            let hours = Math.floor(min/60);
+            min = min % 60;
+            return `${hours}hr:${min} mins`;
+        }
 
-       
-/*     const getHeroMovie = async ()=>{
-        const response =  await fetch(HERO_ENDPOINT);
-        const responseJSON = await response.json();
-        setMovie(responseJSON);
-    } */
-    const handleMovie = (e)=>{
-        console.log("diste click")
+    }
+    const updateInfo = async (values )=>{
+        try {
+            const data = await axios.get(HERO_ENDPOINT, CONFIG);
+            const responseJSON = data['data']['data'];
+            setMovie(prevState => {
+                return {...prevState,
+                   ...responseJSON, ...{duration: toHourAndMins(responseJSON)}}
+                }
+                );
+        } catch (err) {
+                console.log(err);
+        }
     }
 
-    console.log(handleMovie,'funcion');
+
+    const ratingStar =(movie)=>{
+        const maxRating = movie.rating;
+        const starRounded = Math.round(maxRating);
+        console.log(starRounded)
+    }
+    console.log(ratingStar(movie));
     useEffect(()=>{
         try {
             getListMovies();
-            getHeroMovie();
             getTrailers();
+            updateInfo();
         } catch (err) {
             console.log(err);
         }
     },[]);
 
-    
-
+    const p =toHourAndMins(movies)
+    console.log( movies,'UPDATE');
+    console.log( toHourAndMins(movies),'DATA UP');
 
     return (
         <Fragment>
             <Hero trailers={trailers} movie={movie}/>
-            <ListMovies handleMovie={handleMovie} movies={movies}/>
+            <ListMovies  movies={movies}/>
             <Footer/>
         </Fragment>
     )

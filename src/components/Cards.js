@@ -4,7 +4,7 @@ const Cards = ({cards}) => {
     return (
         <div className="trailers wrapper">      
             <h2 className="title-trailer">Trailers</h2>
-            {   (cards) ?
+            {   (cards.lenght > 1) ?(
                     cards.map((trailer,index) =>{
                         return(
                             <div key={trailer._id} className="trailers-container ">
@@ -15,8 +15,18 @@ const Cards = ({cards}) => {
                             </div>
                         )
                     })
+                )
                 :(
-                    <span className="title-trailer">Trailers not found :( </span>
+                    cards.map((trailer) =>{
+                        return(
+                            <div key={trailer._id} className="trailers-container ">
+                                <div className="trailer ">
+                                    <img src={trailer.trailerImage} className="image-trailer" alt="trailer"></img>
+                                    
+                                </div>
+                            </div>
+                        )
+                    })
                 )
             }
         </div>
