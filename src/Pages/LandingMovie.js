@@ -20,7 +20,7 @@ const LandingMovie = () => {
         return `${hours}hr ${min} mins`;
     }
 
-    const updateInfo = async ()=>{
+    const getLandingMovie = async ()=>{
         try {
             const data = await axios.get(MOVIE_BY_ID_ENDPOINT, CONFIG);
             const responseJSON = data['data']['data'];
@@ -34,37 +34,18 @@ const LandingMovie = () => {
             console.log(err);
         }
     }
-    const getListMovies= async () => {
-        try {
-                const data = await axios.get(MOVIE_BY_ID_ENDPOINT, CONFIG);
-                const responseJSON = data['data']['data'];
-                setMovie(responseJSON);
-                setTrailer([responseJSON]);
-                return data;
-        } catch (err) {
-                console.log(err);
-        }
-    }; 
-
-/*     const getTrailers= async () => {
-        try {
-                const data = await axios.get(TRAILERS_ENDPOINT, CONFIG);
-                const responseJSON = data['data']['data'];
-                setTrailers(responseJSON);
-                return data;
-        } catch (err) {
-                console.log(err);
-        }
-    };  */
 
     useEffect(()=>{
         try {
-            updateInfo(); 
+            getLandingMovie(); 
         } catch (err) {
             console.log(err);
         }
     },[]);
 
+
+
+    
     return (
         <Fragment>
             <Header/>

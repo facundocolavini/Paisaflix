@@ -117,6 +117,7 @@ body {
   align-items: center;
   object-fit: contain;
   padding-right:1em ;
+  cursor:pointer;
 }
 .name-user{
   color:var(--color-text);
@@ -470,16 +471,19 @@ body {
 }
 .colum-product{
   display: grid; 
+
   justify-self: flex-end;
   grid-template-columns: 200px;
 }
 .colum-media{
   display: grid; 
+ 
   justify-self: flex-end;
   grid-template-columns: 200px;
 }
 .colum-sitemap{
   display: grid; 
+
   justify-self: flex-end;
   grid-template-columns: 200px;
 }
@@ -500,6 +504,7 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 88px;
+  
   color:var(--color-text);
   font-family: var(--font-base);
 }
@@ -507,6 +512,7 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
+  cursor:pointer;
   line-height: 32px;
   color:#E5E5E5;
   font-family: var(--font-base);
@@ -515,6 +521,7 @@ body {
   position:relative;
   display:flex;
   align-items: center;
+
 }
 .arrow{
   position: absolute;
@@ -538,12 +545,13 @@ body {
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
-
+  cursor:pointer;
 }
 .input-contact{
 
   width: 282px;
   height: 64px;
+  
   font-family: var(--font-base);
   font-size: 16px;
   background: transparent;
@@ -568,3 +576,6 @@ body {
 .ubication-icon{
   cursor: pointer;
 }
+
+/* RESPONSIVE */
+

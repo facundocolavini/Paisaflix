@@ -1,12 +1,11 @@
  
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom';
-import { useParams } from 'react-router';
-import duration from '../assets/icons/clock.svg';
-import views from '../assets/icons/eye.svg';
+import iconDuration from '../assets/icons/clock.svg';
+import iconViews from '../assets/icons/eye.svg';
 import loading from '../assets/icons/loading.svg';
-const ListMovies = ({movies}) => {
-    
+const ListMovies = ({movies,time,views}) => {
+   
     return (
         <Fragment>
             <main className="main wrapper">
@@ -25,10 +24,10 @@ const ListMovies = ({movies}) => {
                                             <img src={movie.coverImage} className="movie-img" alt={movie.name}></img>
                                             <div className="information-movie">
                                                 <div className="information-stats">
-                                                    <img src={duration} className="clock-icon" alt="duration movie" ></img>
-                                                    <span className="duration">{movie.duration}</span>
-                                                    <img src={views} className="eye-icon" alt="views" ></img>
-                                                    <span className="views">{movie.views}K views</span>
+                                                    <img src={iconDuration} className="clock-icon" alt="duration movie" ></img>
+                                                    <span className="duration">{time[index]}</span>
+                                                    <img src={iconViews} className="eye-icon" alt="views" ></img>
+                                                    <span className="views">{views[index]} views</span>
                                                 </div>
                                                 <h3 className="title-movie">{movie.name}</h3>
                                             </div>
