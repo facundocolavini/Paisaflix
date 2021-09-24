@@ -1,29 +1,29 @@
 ## Paisaflix! Challenges Web Dev
-Este es un challenges en el cual desarrolle una pequeña pagina dinamica de peliculas.
+   Este es un challenges en el cual desarrolle una pequeña pagina dinamica de peliculas estilo Netflix.Dond
+  ### Para esto se utili e implemento el uso de estados con react para comunicar a los  componentes y armar la estructura de las 2 vistas en la cuales para mostrar su                contenido era necesario consumir una API.El diseño fue realizado con css de todo sitio.
 
-## Inicializacion del proyecto
-`npx create-react-app paisaflix --template redux`
-## Limpieza de archivos
+   #### This web project was made for the CorderHouse Web Development course as a final delivery, where technologies and libraries were implemented for the layout, in addition to    its design.
 
-## Importar las librerias
-material-ui/core,axios, firebase, react-router-dom , react-uuid, styled components
-### App.js - layout
-Cree las rutas
+# Deploy: https://pasaflex.netlify.app/
 
-## Estilos 
-Utilizamos css para crear una infraestructura que nos permita asignar estilos a cada una de las clases.
+# Requisitos 📋
+###### Librerias y tecnologias:
 
-### Crear carpetas de componentes: components, Pages
--Cree la infraestructura básica de los componentes
-que representan a la página: Home , LandingMovie
+      Git
+      npm
+      React
+      JavaScript
+      HTML5
+      CSS3
 
-### Estilos de los componentes de Pages
- Patrón para añadir la infraestructura de estilos a todos los components de Pages: Cards,
- Footer , Header, HeroMovie , ListMovies , HeroMovie.
+# Installation 🔧
+    
+    `npx create-react-app paisaflix --template redux`
+    `npm add axios` 
+    `npm add react-dom` 
+    `npm add react-router` 
+    `npm add react-router-dom`
 
-### Cree la carpeta components con componentes que conforman las Pages.
--Creamos la infraestructura basica del resto de componentes
+# Built with 🛠️
 
-### Formateo de datos 
--Trabaje con el estado de los componentes para formatear la duracion y  de cada pelicula.
-
+   Frameworks [REACT](https://reactjs.org/)
