@@ -15,7 +15,7 @@
       HTML5
       CSS3
 
-# Installation 🔧
+# Instalaciónes 🔧
     
     `npx create-react-app paisaflix --template redux`
     `npm add axios` 
@@ -23,6 +23,6 @@
     `npm add react-router` 
     `npm add react-router-dom`
 
-# Built with 🛠️
+# Construido con 🛠️
 
    Frameworks [REACT](https://reactjs.org/)
