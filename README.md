@@ -18,8 +18,8 @@ Utilizamos css para crear una infraestructura que nos permita asignar estilos a 
 que representan a la página: Home , LandingMovie
 
 ### Estilos de los componentes de Pages
- Patrón para añadir la infraestructura de estilos a todos los components de Pages: Button
- CardsTrailers , CardTrailer, Hero , ListMovies , StatsMovies.
+ Patrón para añadir la infraestructura de estilos a todos los components de Pages: Cards,
+ Footer , Header, HeroMovie , ListMovies , HeroMovie.
 
 ### Cree la carpeta components con componentes que conforman las Pages.
 -Creamos la infraestructura basica del resto de componentes
