@@ -25,4 +25,4 @@
 
 # Construido con 🛠️
 
-   Frameworks [REACT](https://reactjs.org/)
+   [REACT](https://reactjs.org/)
